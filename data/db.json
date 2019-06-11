@@ -1,10 +1,45 @@
 {
-    "ids": {
-      "Pais": 1,
-      "Integracion": 1
+  "ids": {
+    "Pais": 4,
+    "Integracion": 4,
+    "UnidadNegocio": 4,
+    "Aplicacion": 2,
+    "EstadoIntegracion": 4,
+    "Proyecto": 4,
+    "Tecnologia": 3
+  },
+  "models": {
+    "Pais": {
+      "1": "{\"nombre\":\"ARG\",\"descripcion\":\"Argentina\",\"idPais\":1}",
+      "2": "{\"nombre\":\"CHL\",\"descripcion\":\"Chile\",\"idPais\":2}",
+      "3": "{\"nombre\":\"PER\",\"descripcion\":\"Perú\",\"idPais\":3}"
     },
-    "models": {
-      "Pais": {
-      }
+    "UnidadNegocio": {
+      "1": "{\"nombre\":\"TXD\",\"descripcion\":\"Tiendas Por Departamento\",\"id_un\":1}",
+      "2": "{\"nombre\":\"MDH\",\"descripcion\":\"Mejoramiento Del Hogar\",\"id_un\":2}",
+      "3": "{\"nombre\":\"SUP\",\"descripcion\":\"Supermercados\",\"id_un\":3}"
+    },
+    "Integracion": {
+      "1": "{\"codigoInt\":\"INT0000\",\"nombre\":\"Nombre INT0000\",\"descripcion\":\"descripción\",\"unId\":1,\"paisId\":2,\"idInt\":1}",
+      "2": "{\"codigoInt\":\"INT0001\",\"nombre\":\"Nombre INT0001\",\"descripcion\":\"descripción\",\"unId\":1,\"paisId\":1,\"idInt\":2}",
+      "3": "{\"codigoInt\":\"INT0002\",\"nombre\":\"nombre INT0002\",\"descripcion\":\"descripción\",\"unId\":2,\"paisId\":2,\"idInt\":3}"
+    },
+    "Aplicacion": {
+      "1": "{\"nombre\":\"JDA\",\"codigo\":\"JDADSCL\",\"descripcion\":\"jda\",\"sox\":\"si\",\"id\":1}"
+    },
+    "EstadoIntegracion": {
+      "1": "{\"nombre\":\"Productiva\",\"id\":1}",
+      "2": "{\"nombre\":\"No Productiva\",\"id\":2}",
+      "3": "{\"nombre\":\"En Desarrollo\",\"id\":3}"
+    },
+    "Proyecto": {
+      "1": "{\"epm\":\"0001\",\"nombre\":\"proyecto prueba 0001\",\"descripcion\":\"descripción\",\"id\":1}",
+      "2": "{\"epm\":\"0002\",\"nombre\":\"proyecto prueba 0002\",\"descripcion\":\"descripción\",\"id\":2}",
+      "3": "{\"epm\":\"0003\",\"nombre\":\"proyecto prueba 0003\",\"descripcion\":\"descripción\",\"id\":3}"
+    },
+    "Tecnologia": {
+      "1": "{\"nombre\":\"Oracle Service Bus\",\"id\":1}",
+      "2": "{\"nombre\":\"Oracle Data Integrator\",\"id\":2}"
     }
   }
+}
