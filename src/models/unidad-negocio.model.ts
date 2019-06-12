@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, hasMany} from '@loopback/repository';
+import { Integracion, IntegracionWithRelations } from './integracion.model';
 
 @model({settings: {}})
 export class UnidadNegocio extends Entity {
@@ -20,6 +21,8 @@ export class UnidadNegocio extends Entity {
   })
   descripcion: string;
 
+  @hasMany(() => Integracion)
+  integraciones?: Integracion[];
 
   constructor(data?: Partial<UnidadNegocio>) {
     super(data);
@@ -28,6 +31,7 @@ export class UnidadNegocio extends Entity {
 
 export interface UnidadNegocioRelations {
   // describe navigational properties here
+  integraciones?: IntegracionWithRelations[];
 }
 
 export type UnidadNegocioWithRelations = UnidadNegocio & UnidadNegocioRelations;

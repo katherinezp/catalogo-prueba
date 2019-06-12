@@ -1,5 +1,5 @@
 import {Entity, model, property} from '@loopback/repository';
-import { UnidadNegocioRelations, UnidadNegocioWithRelations } from './unidad-negocio.model';
+import { UnidadNegocioWithRelations } from './unidad-negocio.model';
 import { PaisWithRelations } from './pais.model';
 import { ProyectoWithRelations } from './proyecto.model';
 import { AplicacionWithRelations } from './aplicacion.model';

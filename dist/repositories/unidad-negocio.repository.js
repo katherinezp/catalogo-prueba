@@ -16,14 +16,18 @@ const repository_1 = require("@loopback/repository");
 const models_1 = require("../models");
 const datasources_1 = require("../datasources");
 const core_1 = require("@loopback/core");
+const integracion_repository_1 = require("./integracion.repository");
 let UnidadNegocioRepository = class UnidadNegocioRepository extends repository_1.DefaultCrudRepository {
-    constructor(dataSource) {
+    constructor(dataSource, integracionRepositoryGetter) {
         super(models_1.UnidadNegocio, dataSource);
+        this.integracionRepositoryGetter = integracionRepositoryGetter;
+        this.integraciones = this.createHasManyRepositoryFactoryFor('integraciones', integracionRepositoryGetter);
     }
 };
 UnidadNegocioRepository = __decorate([
     __param(0, core_1.inject('datasources.db')),
-    __metadata("design:paramtypes", [datasources_1.DbDataSource])
+    __param(1, repository_1.repository.getter(integracion_repository_1.IntegracionRepository)),
+    __metadata("design:paramtypes", [datasources_1.DbDataSource, Function])
 ], UnidadNegocioRepository);
 exports.UnidadNegocioRepository = UnidadNegocioRepository;
 //# sourceMappingURL=unidad-negocio.repository.js.map

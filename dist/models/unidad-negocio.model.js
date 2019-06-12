@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const repository_1 = require("@loopback/repository");
+const integracion_model_1 = require("./integracion.model");
 let UnidadNegocio = class UnidadNegocio extends repository_1.Entity {
     constructor(data) {
         super(data);
@@ -36,6 +37,10 @@ __decorate([
     }),
     __metadata("design:type", String)
 ], UnidadNegocio.prototype, "descripcion", void 0);
+__decorate([
+    repository_1.hasMany(() => integracion_model_1.Integracion),
+    __metadata("design:type", Array)
+], UnidadNegocio.prototype, "integraciones", void 0);
 UnidadNegocio = __decorate([
     repository_1.model({ settings: {} }),
     __metadata("design:paramtypes", [Object])

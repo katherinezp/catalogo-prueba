@@ -11,4 +11,5 @@ __export(require("./proyecto.controller"));
 __export(require("./tecnologia.controller"));
 __export(require("./estado-integracion.controller"));
 __export(require("./aplicacion.controller"));
+__export(require("./un-integraciones.controller"));
 //# sourceMappingURL=index.js.map
